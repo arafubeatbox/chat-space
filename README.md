@@ -23,8 +23,8 @@
 ## chat_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|chat_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|chat_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -36,8 +36,8 @@
 |------|----|-------|
 |message|text|null: false|
 |image|string||
-|user_id|integer|null: false, foreign_key:true|
-|chat_id|integer|null: false, foreign_key:true|
+|user_id|references|null: false, foreign_key:true|
+|chat_id|references|null: false, foreign_key:true|
 
 ### Association
 - belongs_to :user
