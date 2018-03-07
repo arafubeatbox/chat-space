@@ -1,3 +1,138 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sidemenu{
+  float: left;
+  width: 300px;
+  height: 100vh;
+  color: #FFFFFF;
+
+  &__profile{
+    background-color: #253141;
+    font-size: 16px;
+    font-weight: bold;
+    height: 15%;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 120px;
+    &__name{
+      float: left;
+    }
+    &__new-chat{
+      float: right;
+    }
+    &__settings{
+      float: right;
+    }
+  }
+
+  &__chatroom-list{
+    background-color: #2f3e51;
+    height: 85%;
+    &__each{
+      padding: 20px;
+      &__title{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__recent-message{
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.chatspace{
+  float: left;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  &__information{
+    height: 15%;
+    border: 1px solid #eeeeee;
+    padding-left: 40px;
+    padding-right: 40px;
+    &__title{
+      float: left;
+      padding-top: 35px;
+      font-size: 20px;
+      color: #333333;
+      padding-bottom: 15px;
+    }
+    &__edit{
+      color: #38AEF0;
+      float: right;
+      margin-top: 28px;
+      padding: 10px 20px;
+      display: block;
+      text-align: center;
+      border: 2px solid #38AEF0;
+    }
+    &__member{
+      font-size: 12px;
+      color: #999999;
+      clear: both;
+    }
+  }
+
+
+  &__main{
+    background-color: #AAAAAA;
+    height: calc( 100vh - 15% - 90px);
+    &__chat-list{
+      padding-top: 46px;
+      padding-left: 40px;
+     &__each{
+       &__sender{
+          font-size: 16px;
+          font-weight: bold;
+         color: #434A54;
+          padding-right: 10px;
+          float: left;
+        }
+        &__date{
+         font-size: 12px;
+         color: #999999;
+         float: left;
+       }
+        &__message{
+         padding-top: 10px;
+          padding-bottom: 40px;
+         font-size: 14px;
+          color: #434A54;
+          clear: both;
+        }
+      }
+    }
+  }
+
+
+
+  &__message-sender{
+    height: 90px;
+    &__contents{
+      height: 100%;
+      padding: 0px 40px;
+      &__box{
+        width: calc( 100% - 200px );
+        height: 50px;
+        margin: 20px 0;
+        padding: 0 10px;
+        font-size: 16px;
+        color: #434A54;
+      }
+      &__button{
+        color: #fff;
+        background-color: #38AEF0;
+        float: right;
+        height: 50px;
+        width: 100px;
+        margin: 20px 0;
+      }
+    }
+  }
+}
