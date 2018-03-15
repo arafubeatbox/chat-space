@@ -20,7 +20,7 @@
 .chatspace
   .chatspace__information
     %h2.chatspace__information__title sample
-    %a.chatspace__information__edit{ :href => "" } Edit
+    %a.chatspace__information__edit{ href: "" } Edit
     %h3.chatspace__information__member MEMBER: seo
 
 
@@ -39,10 +39,10 @@
 
   .chatspace__message-sender
     .chatspace__message-sender__contents
-      %input.chatspace__message-sender__contents__box{ :type => "text", :placeholder => "type a message"}
-        %label{ :for=>"file_photo" }
-          %input.chatspace__message-sender__contents__box__image{ :type => "file", :style => "display:none;", :id => "file_photo" }=fa_icon("image")
-      %input.chatspace__message-sender__contents__button{ :type => "submit", :value => "Send" }
+      %input.chatspace__message-sender__contents__box{ type:  "text", placeholder: "type a message"}
+        %label{ for: "file_photo" }
+          %input.chatspace__message-sender__contents__box__image{ type: "file", style: "display:none;", id: "file_photo" }=fa_icon("image")
+      %input.chatspace__message-sender__contents__button{ type: "submit", value: "Send" }
 
 
 
