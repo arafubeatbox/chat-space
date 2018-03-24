@@ -1,24 +1,4 @@
-.sidemenu
-
-  .sidemenu__profile
-    %h2.sidemenu__profile__name
-      = current_user.name
-    %h2.sidemenu__profile__settings
-      = link_to edit_users_path(current_user) do
-        = fa_icon 'cog', class: 'icon'
-    %h2.sidemenu__profile__new-chat
-      = link_to new_chats_path do
-        =fa_icon("edit")
-
-
-  .sidemenu__chatroom-list
-    .sidemenu__chatroom-list__each
-      %h3.sidemenu__chatroom-list__each__title sample
-      %h4.sidemenu__chatroom-list__each__recent-message Good bye world!
-    .sidemenu__chatroom-list__each
-      %h3.sidemenu__chatroom-list__each__title aaaaaaaaa
-      %h4.sidemenu__chatroom-list__each__recent-message まだメッセージはありません。
-
+= render 'shared/side_bar'
 
 
 
