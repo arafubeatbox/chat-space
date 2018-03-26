@@ -1,0 +1,9 @@
+.chatspace__main__chat-list__each
+  %h3.chatspace__main__chat-list__each__sender
+    = message.user.name
+  %h4.chatspace__main__chat-list__each__date
+    = message.created_at
+- if message.message.present?
+  %h4.chatspace__main__chat-list__each__message
+    = message.message
+    = image_tag message.image.url, class: 'chatspace__main__chat-list__each__message__image' if message.image.present?
