@@ -2,6 +2,8 @@ class ChatsController < ApplicationController
   before_action :set_chat, only: [:edit, :update]
 
   def index
+    @message = Message.new
+    @messages = @chat.messages.includes(:user) if @chat
   end
 
   def new

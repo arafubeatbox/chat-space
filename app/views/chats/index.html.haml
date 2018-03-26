@@ -2,33 +2,3 @@
 
 
 
-.chatspace
-  .chatspace__information
-    %h2.chatspace__information__title sample
-    %a.chatspace__information__edit{ href: "" } Edit
-    %h3.chatspace__information__member MEMBER: seo
-
-
-  .chatspace__main
-    .chatspace__main__chat-list
-      .chatspace__main__chat-list__each
-        %h3.chatspace__main__chat-list__each__sender seo
-        %h4.chatspace__main__chat-list__each__date 2018/02/17 12:45:23
-        %h4.chatspace__main__chat-list__each__message Good bye world!
-
-      .chatspace__main__chat-list__each
-        %h3.chatspace__main__chat-list__each__sender 風太
-        %h4.chatspace__main__chat-list__each__date 2018/02/18 15:23:12
-        %h4.chatspace__main__chat-list__each__message さようなら！!
-
-
-  .chatspace__message-sender
-    .chatspace__message-sender__contents
-      %input.chatspace__message-sender__contents__box{ type:  "text", placeholder: "type a message"}
-        %label{ for: "file_photo" }
-          %input.chatspace__message-sender__contents__box__image{ type: "file", style: "display:none;", id: "file_photo" }=fa_icon("image")
-      %input.chatspace__message-sender__contents__button{ type: "submit", value: "Send" }
-
-
-
-

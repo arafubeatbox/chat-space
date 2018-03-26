@@ -1,0 +1,26 @@
+= render 'shared/side_bar'
+
+
+
+.chatspace
+  .chatspace__information
+    %h2.chatspace__information__title sample
+    %a.chatspace__information__edit{ href: "" } Edit
+    %h3.chatspace__information__member MEMBER: seo
+
+
+  .chatspace__main
+    .chatspace__main__chat-list
+      = render @messages
+
+
+
+  .chatspace__message-sender
+    .chatspace__message-sender__contents
+      = form_for [@chat, @message],url: chats_messages_path do |f|
+        = f.hidden_field :chat_id, value: @chat.id
+        = f.text_field :message, class: 'chatspace__message-sender__contents__box', placeholder: 'type a message'
+        = f.label :image, class: 'chatspace__message-sender__contents__box__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'chatspace__message-sender__contents__button'
