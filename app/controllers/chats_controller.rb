@@ -28,7 +28,7 @@ class ChatsController < ApplicationController
 
   def update
     if @chat.update(chat_params)
-      redirect_to chats_messages_path(@chat), notice: 'チャットを編集しました'
+      redirect_to chat_messages_path(@chat), notice: 'チャットを編集しました'
     else
       render :edit
     end

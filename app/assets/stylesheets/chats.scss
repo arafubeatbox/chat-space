@@ -6,27 +6,38 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .sidemenu{
-  float: left;
-  width: 300px;
   height: 100vh;
+  width: 300px;
+  float: left;
   color: #FFFFFF;
-
   &__profile{
-    background-color: #253141;
-    font-size: 16px;
-    font-weight: bold;
     height: 15%;
-    padding-left: 20px;
-    padding-right: 20px;
-    line-height: 120px;
-    &__name{
-      float: left;
-    }
-    &__new-chat{
-      float: right;
-    }
-    &__settings{
-      float: right;
+    width: 100%;
+    background-color: #253141;
+    position: relative;
+    &__content{
+      height: 50px;
+      width: 100%;
+      line-height: 50px;
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      &__name{
+        font-weight: bold;
+        margin: 0 20px;
+        position: relative;
+        display: inline-block;
+      }
+      &__new-chat{
+        margin-left: 90px;
+        position: relative;
+        display: inline-block;
+      }
+      &__settings{
+        position: relative;
+        display: inline-block;
+      }
     }
   }
 
@@ -54,31 +65,30 @@
   float: left;
   height: 100vh;
   width: calc(100vw - 300px);
-  &__information{
+  &__top{
     height: 15%;
-    border: 1px solid #eeeeee;
-    padding-left: 40px;
-    padding-right: 40px;
-    &__title{
-      float: left;
-      padding-top: 35px;
-      font-size: 20px;
-      color: #333333;
-      padding-bottom: 15px;
-    }
-    &__edit{
-      color: #38AEF0;
-      float: right;
-      margin-top: 28px;
-      padding: 10px 20px;
-      display: block;
-      text-align: center;
-      border: 2px solid #38AEF0;
+    border: 1px solid #eee;
+    &__information{
+      margin: 0 40px;
+      &__title{
+        color: #333;
+        font-size: 20px;
+        margin: 35px 0 15px;
+        float: left;
+      }
+      &__edit{
+        color: #38AEF0;
+        font-size: 15px;
+        padding: 12.5px 20px;
+        margin: 28px 20px 0;
+        border: 1px solid #38AEF0;
+        float: right;
+      }
     }
     &__member{
+      color: #999;
       font-size: 12px;
-      color: #999999;
-      clear: both;
+      margin: 0 40px;
     }
   }
 
@@ -86,6 +96,7 @@
   &__main{
     background-color: #AAAAAA;
     height: calc( 100vh - 15% - 90px);
+    overflow: auto;
     &__chat-list{
       padding-top: 46px;
       padding-left: 40px;
@@ -138,6 +149,12 @@
       }
     }
   }
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
 }
 
 .hidden{
