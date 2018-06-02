@@ -9,7 +9,10 @@ class MessagesController < ApplicationController
   def create
     @message = @chat.messages.new(message_params)
     if @message.save
-      redirect_to chats_messages_path(@chat), notice: 'メッセージが送信されました'
+      respond_to do |format|
+      format.html { redirect_to chat_messages_path(@chat), notice: 'メッセージが送信されました'  }
+      format.json
+      end
     else
       @messages = @chat.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
@@ -24,11 +27,6 @@ class MessagesController < ApplicationController
   end
 
   def set_chat
-    if params[:message]
-      p = params[:message]
-      @chat = Chat.find(p[:chat_id])
-    else
-      @chat = Chat.find(params[:format])
-    end
+    @chat = Chat.find(params[:chat_id])
   end
 end

@@ -3,10 +3,13 @@
 
 
 .chatspace
-  .chatspace__information
-    %h2.chatspace__information__title sample
-    %a.chatspace__information__edit{ href: "" } Edit
-    %h3.chatspace__information__member MEMBER: seo
+  .chatspace__top
+    .chatspace__top__information.clearfix
+      %h2.chatspace__top__information__title
+        = @chat.name
+      = link_to edit_chat_path(@chat), class: "chatspace__top__information__edit" do
+        ="Edit"
+    %h3.chatspace__top__member MEMBER:
 
 
   .chatspace__main
@@ -17,8 +20,7 @@
 
   .chatspace__message-sender
     .chatspace__message-sender__contents
-      = form_for [@chat, @message],url: chats_messages_path do |f|
-        = f.hidden_field :chat_id, value: @chat.id
+      = form_for [@chat, @message],id: "new_message" do |f|
         = f.text_field :message, class: 'chatspace__message-sender__contents__box', placeholder: 'type a message'
         = f.label :image, class: 'chatspace__message-sender__contents__box__image' do
           = fa_icon 'picture-o', class: 'icon'
