@@ -2,7 +2,7 @@
   %h3.chatspace__main__chat-list__each__sender
     = message.user.name
   %h4.chatspace__main__chat-list__each__date
-    = message.created_at
+    = simple_time(message.created_at)
 - if message.message.present?
   %h4.chatspace__main__chat-list__each__message
     = message.message
