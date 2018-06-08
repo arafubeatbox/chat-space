@@ -1,3 +1,4 @@
+/ バリデーションに引っかかった場合、errorsにエラーメッセージが格納される。エラーメッセージがある場合、any?でtrueを返す。
 = form_for chat do |f|
   - if chat.errors.any?
     .chat-group-form__errors
@@ -5,6 +6,7 @@
       %ul
         - chat.errors.full_messages.each do |message|
           %li= message
+  / ここまでエラーメッセージの処理
   .chat-group-form__field
     .chat-group-form__field--left
       = f.label :name, class: 'chat-group-form__label'
