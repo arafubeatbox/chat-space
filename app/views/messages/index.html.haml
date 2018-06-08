@@ -9,7 +9,8 @@
         = @chat.name
       = link_to edit_chat_path(@chat), class: "chatspace__top__information__edit" do
         ="Edit"
-    %h3.chatspace__top__member MEMBER:
+    %h3.chatspace__top__member
+      = "MEMBER:" + "#{chat_user_names(@chat)}"
 
 
   .chatspace__main
